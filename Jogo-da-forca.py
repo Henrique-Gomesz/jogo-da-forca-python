@@ -1,4 +1,6 @@
 import random
+pais=['brasil','estados-unidos','africa-do-sul','argentina','angola','chile','coreia-do-norte','cuba','dinamarca','japao','peru','paraguai']
+animais=['baleia','cachorro','gato','foca','flamingo','hiena','golfinho','raposa','vaca','tartaruga','zebra','urubu','ovelha']
 frutas=['abacate','abacaxi','amora','banana','cacau','caqui','cereja','goiaba','framboesa','jaca','kiwi','laranja','manga','melancia','morango','pera','pitaya','tangerina','uva']
 palavra=random.choice(frutas)
 print(palavra)
