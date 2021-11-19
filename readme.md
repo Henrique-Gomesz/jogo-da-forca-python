@@ -2,7 +2,5 @@
 
 # PARTICIPANTES
 Henrique Gomes 
-<br/><br/>
 Leonardo Gomes 
-<br/><br/>
 Breno Queiroga 
