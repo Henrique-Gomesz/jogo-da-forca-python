@@ -24,3 +24,4 @@ while cont!=6 and acertou==False:
     for a in range(0,len(palavra)):
         if str[a]=="_":
             acertou= False
+            A
