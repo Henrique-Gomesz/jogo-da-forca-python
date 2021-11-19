@@ -1,5 +1,8 @@
 # TRABALHO AMBIENTES DE PROGRAMAÇÃO FIPP: Jogo da forca.
 
 # PARTICIPANTES
-Henrique Gomes
-Leonardo Gomes
+Henrique Gomes 
+<br/><br/>
+Leonardo Gomes 
+<br/><br/>
+Breno Queiroga 
