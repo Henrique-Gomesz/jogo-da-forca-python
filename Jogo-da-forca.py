@@ -1,0 +1,24 @@
+import random
+frutas=['abacate','abacaxi','amora','banana','cacau','caqui','cereja','goiaba','framboesa','jaca','kiwi','laranja','manga','melancia','morango','pera','pitaya','tangerina','uva']
+palavra=random.choice(frutas)
+print(palavra)
+str= []
+for i in range(0,len(palavra)):
+    str.append('_')
+print(str)
+cont=0
+acertou= False
+while cont!=6 and acertou==False:
+    letra=input("Digite uma letra:")
+    cont2=0
+    for i in range(0,len(palavra)):
+        if letra==palavra[i]:
+            str[i]=letra
+            cont2+=1
+    if cont2==0:
+        cont+=1
+    print(str)
+    acertou = True 
+    for a in range(0,len(palavra)):
+        if str[a]=="_":
+            acertou= False
