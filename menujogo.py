@@ -1,2 +1,3 @@
-print('\033[0;33m____________________________')
-print('|                           |\033[m')
+from  Funcções_menu import *
+
+cabeçalho('testando 123')

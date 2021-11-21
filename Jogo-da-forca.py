@@ -1,6 +1,5 @@
 import random
-print("-------------------------")
-print('\033[1;35m'+'Escolha o tema para jogar'+'\033[0;0m')
+
 
 
 
