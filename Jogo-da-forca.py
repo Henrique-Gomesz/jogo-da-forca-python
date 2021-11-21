@@ -1,3 +1,4 @@
+import os
 des_forca = ['''
  +---+
  |   |
@@ -74,7 +75,9 @@ while jogo == True:
         if(resposta == 'Animais' or resposta == 'Frutas' or resposta == 'Séries' or resposta == 'Filmes' or resposta == 'País'):
             menu=False
         else:
+            os.system("cls")
             print("\033[4;31m>>Tema não encontrado, digite novamente o tema desejado<<\033[m")
+            
 
     if(resposta == 'Animais'):
         palavra=random.choice(Animais)
@@ -86,20 +89,24 @@ while jogo == True:
         palavra=random.choice(Filmes)
     elif(resposta=='País'):
         palavra=random.choice(País)
-
-    print(palavra)
+    
     str= []
     for i in range(0,len(palavra)):
         str.append('_')
-    print(str)
     cont=0
     acertou= False
     while cont!=6 and acertou==False:
+        if(cont == 0):
+            os.system("cls")
+            print(palavra)
+        print(des_forca[cont])
+        print(str)
         letra=input("\033[1;34mDigite uma letra:\033[m")
         letra=letra.lower()
         cont2=0
         if letra in lista_letras:
-            print("\033[1;33mPalavra repetida, digite novamente!\033[m") 
+            os.system("cls")
+            print("\033[1;33mPalavra repetida, digite novamente!\033[m")
         else:
             lista_letras.append(letra)
             for i in range(0,len(palavra)):
@@ -109,31 +116,53 @@ while jogo == True:
             if cont2==0:
                 cont+=1
                 if(cont == 6):
-                    print(des_forca[cont])
+                    os.system("cls")
                     print('\033[4;31mVocê Perdeu!\033[m')
+                    print(des_forca[cont])
+                    print(str)
                     replay=input('\033[1;35mDeseja jogar novamente? (Y/N):\033[m')
                     replay=replay.upper()
                     if(replay == 'Y'):
                         jogo = True
                         menu = True
+                        os.system("cls")
                     else:
                         jogo = False
-                print(des_forca[cont])
-                print('\033[1;31mVocê errou, digite novamente!\033[m')
-                
-            print(str)
+                        os.system("cls")
+                else:
+                    os.system("cls")
+                    print('\033[1;31mVocê errou, digite novamente!\033[m')
+            else:
+                os.system("cls")
             acertou = True 
 
             for a in range(0,len(palavra)):
                 if str[a]=="_":
                     acertou= False
             if(acertou == True):
+                os.system("cls")
                 print("\033[4;32mParabéns, Você venceu!\033[m")
+                print(des_forca[cont])
+                print(str)
                 replay=input('\033[1;35mDeseja jogar novamente? (Y/N):\033[m')
                 replay=replay.upper()
                 if(replay == 'Y'):
                     jogo = True
                     menu = True
+                    os.system("cls")
                 else:
                     jogo = False
+                    os.system("cls")
+os.system("cls")
+print(cabeçalho)
+print("\033[4;36mCRÉDITOS\033[m".center(50))
+print(cabeçalho)
+print("\033[1;32mHenrique Gomes Junqueira".center(50))
+print("Leonardo Gomes Anholetto".center(42))
+print("Natanael Menezes".center(33))
+print("Breno Queiroga".center(32))
+print("Tauã\033[m".center(25))
+print(cabeçalho)
+
+
             
