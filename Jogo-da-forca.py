@@ -94,6 +94,7 @@ while jogo == True:
     os.system("cls")
     #print(palavra)
     while cont!=6 and acertou==False:
+        print(palavra)
         print(des_forca[cont])
         print(str)
         letra=input("\033[1;34mDigite uma letra:\033[m")
@@ -113,6 +114,7 @@ while jogo == True:
                 if(cont == 6):
                     os.system("cls")
                     print('\033[4;31mVocê Perdeu!\033[m')
+                    print("\033[1;36mPalavra sorteada: {}\033[m".format(palavra))
                     print(des_forca[cont])
                     print(str)
                     print("Palavra:"+palavra.upper())
@@ -138,7 +140,8 @@ while jogo == True:
                     acertou= False
             if(acertou == True):
                 os.system("cls")
-                print("\033[4;32mParabéns, Você venceu!\033[m")
+                print("\033[1;32mParabéns, Você venceu!\033[m")
+                print("\033[1;36mPalavra sorteada: {}".format(palavra))
                 print(des_forca[cont])
                 print(str)
                 replay=input('\033[1;35mDeseja jogar novamente? (Y/N):\033[m')
