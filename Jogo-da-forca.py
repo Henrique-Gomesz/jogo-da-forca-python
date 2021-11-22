@@ -51,10 +51,9 @@ des_forca = ['''
 =========
 ''']
 import random
-Filmes= []
-Séries= []
-País=['brasil','estados-unidos','africa-do-sul','argentina','angola','chile','coreia-do-norte','cuba','dinamarca','japao','peru','paraguai']
-Animais=['baleia','cachorro','gato','foca','flamingo','hiena','golfinho','raposa','vaca','tartaruga','zebra','urubu','ovelha']
+Objeto=['faca','clipe','canivete','bacia','dado','grampo','garfo','quadro','anel','caderno','cadeira','escova','jaleco','urna','varal']
+País=['brasil','bolivia','nigeria','argentina','angola','chile','china','cuba','dinamarca','japao','peru','paraguai','noruega','dinamarca','jamaica','russia','catar','equador']
+Animal=['baleia','cachorro','gato','foca','flamingo','hiena','golfinho','raposa','vaca','tartaruga','zebra','urubu','ovelha','corvo','girafa','leao','cavalo','rato']
 Frutas=['abacate','abacaxi','amora','banana','cacau','caqui','cereja','goiaba','framboesa','jaca','kiwi','laranja','manga','melancia','morango','pera','pitaya','tangerina','uva']
 menu = True
 jogo= True
@@ -66,27 +65,24 @@ while jogo == True:
         print('\033[4;35;40mJOGO DA FORCA v1.0\033[m'.center(55))
         print(cabeçalho)
         print("\033[1;37mDigite o tema desejado\033[m".center(53))
-        print("\033[1;35m- Animais")
+        print("\033[1;35m- Animal")
         print('- Frutas')
-        print("- Séries")
-        print("- Filmes")
+        print("- Objeto")
         print('- País\033[m')
         resposta=input()
-        if(resposta == 'Animais' or resposta == 'Frutas' or resposta == 'Séries' or resposta == 'Filmes' or resposta == 'País'):
+        if(resposta == 'Animal' or resposta == 'Frutas' or resposta == 'Objeto'  or resposta == 'País'):
             menu=False
         else:
             os.system("cls")
             print("\033[4;31m>>Tema não encontrado, digite novamente o tema desejado<<\033[m")
             
 
-    if(resposta == 'Animais'):
-        palavra=random.choice(Animais)
+    if(resposta == 'Animal'):
+        palavra=random.choice(Animal)
     elif(resposta == 'Frutas'):
         palavra=random.choice(Frutas)
-    elif(resposta == 'Séries'):
-        palavra=random.choice(Séries)
-    elif(resposta == 'Filmes'):
-        palavra=random.choice(Filmes)
+    elif(resposta == 'Objeto'):
+        palavra=random.choice(Objeto)
     elif(resposta=='País'):
         palavra=random.choice(País)
     
@@ -95,10 +91,9 @@ while jogo == True:
         str.append('_')
     cont=0
     acertou= False
+    os.system("cls")
+    #print(palavra)
     while cont!=6 and acertou==False:
-        if(cont == 0):
-            os.system("cls")
-            print(palavra)
         print(des_forca[cont])
         print(str)
         letra=input("\033[1;34mDigite uma letra:\033[m")
@@ -120,6 +115,7 @@ while jogo == True:
                     print('\033[4;31mVocê Perdeu!\033[m')
                     print(des_forca[cont])
                     print(str)
+                    print("Palavra:"+palavra.upper())
                     replay=input('\033[1;35mDeseja jogar novamente? (Y/N):\033[m')
                     replay=replay.upper()
                     if(replay == 'Y'):
@@ -134,6 +130,7 @@ while jogo == True:
                     print('\033[1;31mVocê errou, digite novamente!\033[m')
             else:
                 os.system("cls")
+                print("\033[4;32mParabéns, Você acertou!\033[m")
             acertou = True 
 
             for a in range(0,len(palavra)):
@@ -163,6 +160,3 @@ print("Natanael Menezes".center(33))
 print("Breno Queiroga".center(32))
 print("Tauã\033[m".center(25))
 print(cabeçalho)
-
-
-            
