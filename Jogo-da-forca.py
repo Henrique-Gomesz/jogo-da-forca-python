@@ -94,7 +94,6 @@ while jogo == True:
     os.system("cls")
     #print(palavra)
     while cont!=6 and acertou==False:
-        print(palavra)
         print(des_forca[cont])
         print(str)
         letra=input("\033[1;34mDigite uma letra:\033[m")
@@ -117,7 +116,6 @@ while jogo == True:
                     print("\033[1;36mPalavra sorteada: {}\033[m".format(palavra))
                     print(des_forca[cont])
                     print(str)
-                    print("Palavra:"+palavra.upper())
                     replay=input('\033[1;35mDeseja jogar novamente? (Y/N):\033[m')
                     replay=replay.upper()
                     if(replay == 'Y'):
