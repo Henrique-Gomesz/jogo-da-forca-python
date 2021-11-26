@@ -1,8 +1,8 @@
 # TRABALHO AMBIENTES DE PROGRAMAÇÃO FIPP: Jogo da forca.
 
 ### PARTICIPANTES
-- Henrique Gomes <br/>
-- Leonardo Gomes <br/>
+- Henrique Gomes Junqueira <br/>
+- Leonardo Gomes Anholetto <br/>
 - Breno Queiroga <br/>
-- Natan <br/>
-- Tãua <br/>
+- Natanael Menezes Martins <br/>
+- Tauã Trevisanello Ferreira  <br/>
